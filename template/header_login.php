@@ -18,7 +18,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/demo/demo.css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" />
-    <?php session_start();
+    <?php
     if (isset($_SESSION["user_role"])) {
         header("Location:dashboard.php");
     };

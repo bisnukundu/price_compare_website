@@ -19,4 +19,9 @@ if ($_SESSION['user_role'] == 1) {
     $user_delete = $show_users->delete_data($_REQUEST["id"], "users");
     $status = $show_users->show_msg();
     header("Location:dashboard.php?status=$status");
+    if ($_REQUEST["del"]) {
+        $user_delete = $show_users->delete_data($_REQUEST["id"], "banar");
+        $status = $show_users->show_msg();
+        header("Location:dashboard.php?status=$status");
+    }
 }

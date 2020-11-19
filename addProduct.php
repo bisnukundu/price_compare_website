@@ -95,8 +95,6 @@ if (isset($_REQUEST["product_add_btn"])) {
                                             </button>
                                         </div>
                                     <?php } ?>
-
-
                                 </div>
                             </div>
                         </div>

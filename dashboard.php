@@ -1,6 +1,7 @@
 <?php
 require_once('template/header.php');
 require_once('config/functions.php');
+
 ?>
 
 <body class="">
@@ -25,6 +26,7 @@ require_once('config/functions.php');
           <?php
           if ($_SESSION["user_role"] == 0) {
             include('template/userlist.php');
+            include('template/showBanar.php');
           };
           if ($_SESSION["user_role"] != 0) {
             include('template/productlist.php');

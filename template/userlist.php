@@ -24,32 +24,34 @@ $user_data = $show_users->show_data("users");
                             </thead>
                             <tbody>
                                 <?php
-                                $i = 1;
-                                foreach ($user_data as $user) { ?>
-                                    <tr>
-                                        <td><?php echo $i++; ?></td>
-                                        <td><?php echo $user['name'] ?></td>
-                                        <td><?php echo $user['username'] ?></td>
-                                        <?php
-                                        if ($user['role'] == 1) {
-                                            echo "<td>Tesco</td>";
-                                        } elseif ($user['role'] == 2) {
-                                            echo "<td>HeroMarket</td>";
-                                        } elseif ($user['role'] == 3) {
-                                            echo "<td>Giant Mall</td>";
-                                        }elseif ($user['role'] == 0) {
-                                            echo "<td>Admin</td>";
-                                        }
-                                        ?>
+                                if (!empty($user_data)) {
+                                    $i = 1;
+                                    foreach ($user_data as $user) { ?>
+                                        <tr>
+                                            <td><?php echo $i++; ?></td>
+                                            <td><?php echo $user['name'] ?></td>
+                                            <td><?php echo $user['username'] ?></td>
+                                            <?php
+                                            if ($user['role'] == 1) {
+                                                echo "<td>Tesco</td>";
+                                            } elseif ($user['role'] == 2) {
+                                                echo "<td>HeroMarket</td>";
+                                            } elseif ($user['role'] == 3) {
+                                                echo "<td>Giant Mall</td>";
+                                            } elseif ($user['role'] == 0) {
+                                                echo "<td>Admin</td>";
+                                            }
+                                            ?>
 
-                                        <td><a class="btn btn-info btn-sm" href="delete.php?id=<?php echo $user["id"]; ?>">Delete</a></td>
-                                    </tr>
-                                <?php } ?>
+                                            <td><a class="btn btn-info btn-sm" href="delete.php?id=<?php echo $user["id"]; ?>">Delete</a></td>
+                                        </tr>
+                                <?php }
+                                } ?>
                             </tbody>
 
 
                         </table>
-                        
+
 
 
                     </div>

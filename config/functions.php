@@ -125,4 +125,31 @@ class Main_Functions
             $this->msg = "Product Update Faild";
         }
     }
+    public function add_banar($banar1, $banar2, $banar3)
+    {
+        $banar_create_query = "INSERT INTO banar (banar1,banar2,banar3) VALUES (?,?,?)";
+        $banar_check_query = "SELECT * FROM banar";
+        $banar_check = $this->conn->prepare($banar_check_query);
+        $banar_check->execute();
+        $banar_row = $banar_check->rowCount();
+        if ($banar_row == 1) {
+            $this->msg = "Banar Already Exist";
+        } else {
+            $banar_create = $this->conn->prepare($banar_create_query);
+            if ($banar_create->execute([$banar1, $banar2, $banar3])) {
+                $this->msg = "Banar Created Succfully";
+            };
+        }
+    }
+    public function show_banar()
+    {
+        $show_query = "SELECT * FROM banar";
+        $show_product = $this->conn->prepare($show_query);
+        $show_product->execute();
+        $product_count = $show_product->rowCount();
+        if ($product_count > 0) {
+            $Banar = $show_product->fetchAll(PDO::FETCH_ASSOC);
+            return $Banar;
+        }
+    }
 };
