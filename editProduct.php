@@ -1,8 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION["user_role"])) {
+    header("Location:login.php");
+  };
 require_once('template/header.php');
 require_once('config/functions.php');
-
-// $add_product = new Main_Functions();
 $edit_ = new Main_Functions();
 $update_ = new Main_Functions();
 $tablee;

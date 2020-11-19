@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('template/header.php');
 require_once('config/functions.php');
 $add_banar_ = new Main_Functions();

@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION["user_role"])) {
+    header("Location:login.php");
+  };
 require_once('template/header.php');
 require_once('config/functions.php');
 

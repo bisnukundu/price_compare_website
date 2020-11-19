@@ -1,6 +1,11 @@
 <?php
 require_once('template/header.php');
 require_once('config/functions.php');
+session_start();
+if (isset($_SESSION["user_role"])) {
+    header("Location:dashboard.php");
+};
+
 $login = new Main_Functions();
 if (isset($_REQUEST["login_btn"])) {
     $email = $_REQUEST['email'];
@@ -30,10 +35,10 @@ if (isset($_REQUEST["login_btn"])) {
                         <button type="submit" name="login_btn" class="btn btn-primary">Login</button>
                         <a href="register.php" class="btn btn-danger">Register</a>
                     </form>
-                    <?php 
-                        echo $login->show_msg();
+                    <?php
+                    echo $login->show_msg();
                     ?>
-                    
+
                 </div>
             </div>
 
