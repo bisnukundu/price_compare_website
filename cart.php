@@ -29,7 +29,7 @@ if (isset($_POST['remove'])) {
 
     <div class="container-fluid">
         <div class="row px-5">
-            <div class="col-md-7">
+            <div class="col-md-4">
                 <div class="shopping-cart">
                     <h6>My Cart</h6>
                     <hr>
@@ -57,10 +57,72 @@ if (isset($_POST['remove'])) {
 
                 </div>
             </div>
-            <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+            <!-- market 2   -->
+            <div class="col-md-4">
+                <div class="shopping-cart">
+                    <h6>My Cart</h6>
+                    <hr>
+
+                    <?php
+
+                    $total = 0;
+                    if (isset($_SESSION['cart'])) {
+                        $product_id = array_column($_SESSION['cart'], 'product_id');
+
+                        $result = $db->show_data("tesco");
+                        foreach ($result as $row) {
+                            foreach ($product_id as $id) {
+                                if ($row['id'] == $id) {
+                                    cartElement($row['img'], $row['title'], $row['price'], $row['id']);
+                                    $total = $total + (int)$row['price'];
+                                }
+                            }
+                        }
+                    } else {
+                        echo "<h5>Cart is Empty</h5>";
+                    }
+
+                    ?>
+
+                </div>
+            </div>
+            <!-- market 3  -->
+            <div class="col-md-4">
+                <div class="shopping-cart">
+                    <h6>My Cart</h6>
+                    <hr>
+
+                    <?php
+
+                    $total = 0;
+                    if (isset($_SESSION['cart'])) {
+                        $product_id = array_column($_SESSION['cart'], 'product_id');
+
+                        $result = $db->show_data("tesco");
+                        foreach ($result as $row) {
+                            foreach ($product_id as $id) {
+                                if ($row['id'] == $id) {
+                                    cartElement($row['img'], $row['title'], $row['price'], $row['id']);
+                                    $total = $total + (int)$row['price'];
+                                }
+                            }
+                        }
+                    } else {
+                        echo "<h5>Cart is Empty</h5>";
+                    }
+
+                    ?>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Total price table -->
+        <div class="row px-3">
+            <div class="col-md-4 my-3 border rounded bg-white h-25">
 
                 <div class="pt-4">
-                    <h6>PRICE DETAILS</h6>
+                    <h6>PRICE DETAILS Market 1</h6>
                     <hr>
                     <div class="row price-details">
                         <div class="col-md-6">
@@ -87,6 +149,67 @@ if (isset($_POST['remove'])) {
                 </div>
 
             </div>
+            <div class="col-md-4 my-3 border rounded bg-white h-25">
+
+                <div class="pt-4">
+                    <h6>PRICE DETAILS Market 2</h6>
+                    <hr>
+                    <div class="row price-details">
+                        <div class="col-md-6">
+                            <?php
+                            if (isset($_SESSION['cart'])) {
+                                $count  = count($_SESSION['cart']);
+                                echo "<h6>Price ($count items)</h6>";
+                            } else {
+                                echo "<h6>Price (0 items)</h6>";
+                            }
+                            ?>
+
+                            <hr>
+                            <h6>Total Price</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>$<?php echo $total; ?></h6>
+                            <hr>
+                            <h6>$<?php
+                                    echo $total;
+                                    ?></h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 my-3 border rounded bg-white h-25">
+
+                <div class="pt-4">
+                    <h6>PRICE DETAILS Market 2</h6>
+                    <hr>
+                    <div class="row price-details">
+                        <div class="col-md-6">
+                            <?php
+                            if (isset($_SESSION['cart'])) {
+                                $count  = count($_SESSION['cart']);
+                                echo "<h6>Price ($count items)</h6>";
+                            } else {
+                                echo "<h6>Price (0 items)</h6>";
+                            }
+                            ?>
+
+                            <hr>
+                            <h6>Total Price</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>$<?php echo $total; ?></h6>
+                            <hr>
+                            <h6>$<?php
+                                    echo $total;
+                                    ?></h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 

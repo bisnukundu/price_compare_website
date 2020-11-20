@@ -26,10 +26,10 @@ function cartElement($productimg, $productname, $productprice, $productid)
 {
     $element = "
     
-    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items\">
+    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items m-3\">
                     <div class=\"border rounded\">
                         <div class=\"row bg-white\">
-                            <div class=\"col-md-3 pl-0\">
+                            <div class=\"col-md-6 pl-0\">
                                 <img src=\"../project/admin/assets/product/$productimg\" alt=\"Image1\" class=\"img-fluid\">
                             </div>
                             <div class=\"col-md-6\">
