@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -54,22 +55,31 @@
                                     <a href="index.php">Bisnu kundu</a>
                                 </div>
                             </div>
-                            <div class="col-lg-5 mx-auto mt-4 mt-lg-0">
+                            <!-- <div class="col-lg-5 mx-auto mt-4 mt-lg-0">
                                 <form action="#">
                                     <div class="form-group">
                                         <div class="input-group">
-                                            
+
                                             <input id="input" type="search" class="form-control border-dark" placeholder="Search..." required>
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
+                                                <button class="btn  btn-outline-dark"><i class="fas fa-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="col-lg-auto text-center text-lg-left header-item-holder">
-                                <a href="#" class="header-item">
-                                    <i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i><span id="header-favorite">0</span>
+                            </div> -->
+                            <div class="col-lg-auto ml-auto text-center text-lg-left header-item-holder">
+                                <a href="cart.php" class="header-item s_cart">
+                                    <i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i><span id="header-favorite">
+                                        <?php
+                                        if (isset($_SESSION['cart'])) {
+                                            $count = count($_SESSION['cart']);
+                                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                                        } else {
+                                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                                        }
+                                        ?>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -83,13 +93,13 @@
                                 <div class="collapse navbar-collapse" id="mainNav">
                                     <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                            <a class="nav-link font-weight-bold" href="index.php">Home <span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a>
+                                            <a class="nav-link font-weight-bold" href="index.html">About<span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Contact <span class="sr-only">(current)</span></a>
+                                            <a class="nav-link font-weight-bold" href="index.html">Contact <span class="sr-only">(current)</span></a>
                                         </li>
                                     </ul>
                                 </div>
