@@ -29,10 +29,11 @@
                             <div class="col-auto mr-auto">
                                 <ul class="top-nav">
                                     <li>
-                                        <a href="tel:+123-456-7890"><i class="fa fa-phone-square mr-2"></i>+8801797799383</a>
+                                        <a href="tel:+123-456-7890"><i class="fa fa-phone-square mr-2"></i>+601128038630</a>
                                     </li>
                                     <li>
-                                        <a href="mailto:bisnukundu@gmail.com"><i class="fa fa-envelope mr-2"></i>bisnukundu@gmail.com</a>
+                                        <a href="mailto:bisnukundu@gmail.com"><i class="fa fa-envelope mr-2"></i>skssujon90@gmail.com
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -52,7 +53,7 @@
                         <div class="row">
                             <div class="col-lg-auto">
                                 <div class="site-logo text-center text-lg-left">
-                                    <a href="index.php">Bisnu kundu</a>
+                                    <a href="index.php">Price Comparison</a>
                                 </div>
                             </div>
                             <!-- <div class="col-lg-5 mx-auto mt-4 mt-lg-0">
@@ -74,9 +75,9 @@
                                         <?php
                                         if (isset($_SESSION['cart'])) {
                                             $count = count($_SESSION['cart']);
-                                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                                            echo "<span id=\"cart_count\" class=\"text-drak bg-light\">$count</span>";
                                         } else {
-                                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                                            echo "<span id=\"cart_count\" class=\"text-drak bg-light\">0</span>";
                                         }
                                         ?>
                                     </span>
@@ -96,10 +97,10 @@
                                             <a class="nav-link font-weight-bold" href="index.php">Home <span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link font-weight-bold" href="index.html">About<span class="sr-only">(current)</span></a>
+                                            <a class="nav-link font-weight-bold" href="about.php">About<span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link font-weight-bold" href="index.html">Contact <span class="sr-only">(current)</span></a>
+                                            <a class="nav-link font-weight-bold" href="contact.php">Contact <span class="sr-only">(current)</span></a>
                                         </li>
                                     </ul>
                                 </div>

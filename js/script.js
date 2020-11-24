@@ -52,25 +52,6 @@ function setImgSmall() {
     var width = imgSmall.width();
     imgSmall.height(width);
 }
-// AJAX 
 
 
-// localStorage 
-// $(document).on("click", ".cart_btn", function (e) {
-//     var new_data = e.target.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
-//     if (localStorage.getItem('data') == null) {
-//         localStorage.setItem('data', '[]');
-//     }
 
-//     var old_data = JSON.parse(localStorage.getItem('data'));
-//     old_data.push(new_data);
-//     localStorage.setItem('data', JSON.stringify(old_data));
-// });
-
-// var value = localStorage.getItem('data');
-
-// jQuery.post("cart.php", { product: value }, function (data) {
-//     console.log(data);
-// }).fail(function () {
-//     alert("Damn, something broke");
-// });

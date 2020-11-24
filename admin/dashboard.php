@@ -36,9 +36,6 @@ require_once('config/functions.php');
             include('template/productlist.php');
           }
           ?>
-          <?php
-          print_r($_SESSION);
-          ?>
         </div>
       </div>
 

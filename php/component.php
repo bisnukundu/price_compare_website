@@ -34,7 +34,7 @@ function cartElement($productimg, $productname, $productprice, $productid)
                             </div>
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$productname</h5>
-                                <small class=\"text-secondary\">Seller: dailytuition</small>
+                              
                                 <h5 class=\"pt-2\">$$productprice</h5>
                                 <button type=\"submit\" class=\"btn btn-danger\" name=\"remove\">Remove</button>
                             </div>
