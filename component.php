@@ -24,7 +24,7 @@
                                 </p>
                                 <h5>
                                     <small><s class=\"text-secondary\">$519</s></small>
-                                    <span class=\"price\">$$productprice</span>
+                                    <span class=\"price\">'RM'$productprice</span>
                                 </h5>
     
                                 <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
@@ -37,7 +37,7 @@
         echo $element;
     }
 
-    function cartElement($productimg, $productname, $productprice, $productid)
+    function cartElementt($productimg, $productname, $productprice, $productid)
     {
         $element = "
         
@@ -50,7 +50,7 @@
                                 <div class=\"col-md-6\">
                                     <h5 class=\"pt-2\">$productname</h5>
                                     <small class=\"text-secondary\">Seller: dailytuition</small>
-                                    <h5 class=\"pt-2\">$$productprice</h5>
+                                    <h5 class=\"pt-2\">'RM' $productprice</h5>
                                     <button type=\"submit\" class=\"btn btn-warning\">Save for Later</button>
                                     <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remove</button>
                                 </div>

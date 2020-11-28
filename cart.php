@@ -36,7 +36,7 @@ if (isset($_POST['remove'])) {
 
                     <?php
 
-                    $total1 = 0;
+                    $total1 = [];
                     if (isset($_SESSION['cart'])) {
                         $product_id = array_column($_SESSION['cart'], 'product_id');
 
@@ -45,7 +45,7 @@ if (isset($_POST['remove'])) {
                             foreach ($product_id as $id) {
                                 if ($row['id'] == $id) {
                                     cartElement($row['img'], $row['title'], $row['price'], $row['id']);
-                                    $total1 = $total1 + (int)$row['price'];
+                                    array_push($total1, $row['price']);
                                 }
                             }
                         }
@@ -65,11 +65,12 @@ if (isset($_POST['remove'])) {
 
                     <?php
 
-                    $total2 = 0;
+                    $total2 = [];
                     if (isset($_SESSION['cart'])) {
                         $product_id = array_column($_SESSION['cart'], 'product_id');
                         $result = $db->show_data("giantmall");
                         $result2 = $db->show_data("tesco");
+
                         $cart_title = [];
                         foreach ($result as $row) {
                             foreach ($product_id as $id) {
@@ -82,7 +83,7 @@ if (isset($_POST['remove'])) {
                             foreach ($cart_title as $title) {
                                 if ($row2["title"] == $title) {
                                     cartElement($row2['img'], $row2['title'], $row2['price'], $row2['id']);
-                                    $total2 = $total2 + (int)$row2['price'];
+                                    array_push($total2, $row2['price']);
                                 }
                             }
                         }
@@ -102,7 +103,8 @@ if (isset($_POST['remove'])) {
 
                     <?php
 
-                    $total3 = 0;
+                    $total3 = [];
+
                     if (isset($_SESSION['cart'])) {
                         $product_id = array_column($_SESSION['cart'], 'product_id');
                         $result = $db->show_data("giantmall");
@@ -120,7 +122,7 @@ if (isset($_POST['remove'])) {
                             foreach ($cart_title as $title) {
                                 if ($row2["title"] == $title) {
                                     cartElement($row2['img'], $row2['title'], $row2['price'], $row2['id']);
-                                    $total3 = $total3 + (int)$row2['price'];
+                                    array_push($total3, $row2['price']);
                                 }
                             }
                         }
@@ -145,7 +147,8 @@ if (isset($_POST['remove'])) {
                             <h5>Total Price</h5>
                         </div>
                         <div class="col-md-6">
-                            <h5>$<?php echo $total1; ?></h5>
+                            <h5>RM <?php echo array_sum($total1); ?></h5>
+
                         </div>
                     </div>
                 </div>
@@ -167,7 +170,8 @@ if (isset($_POST['remove'])) {
                             <h5>Total Price</h5>
                         </div>
                         <div class="col-md-6">
-                            <h5>$<?php echo $total2; ?></h5>
+                            <h5>RM <?php echo array_sum($total2); ?></h5>
+
                         </div>
                     </div>
                     <div class="row">
@@ -188,7 +192,7 @@ if (isset($_POST['remove'])) {
                             <h5>Total Price</h5>
                         </div>
                         <div class="col-md-6">
-                            <h5>$<?php echo $total3; ?></h5>
+                            <h5>RM <?php echo array_sum($total3); ?></h5>
                         </div>
                     </div>
                 </div>

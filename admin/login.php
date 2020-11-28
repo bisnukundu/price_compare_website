@@ -32,6 +32,7 @@ if (isset($_REQUEST["login_btn"])) {
                         </div>
                         <button type="submit" name="login_btn" class="btn btn-primary">Login</button>
                         <a href="register.php" class="btn btn-danger">Register</a>
+                        <a href="../index.php" class="btn btn-info">Back To Home</a>
                     </form>
                     <?php
                     echo $login->show_msg();

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2020 at 10:44 AM
+-- Generation Time: Nov 28, 2020 at 11:14 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.22
 
@@ -50,7 +50,7 @@ INSERT INTO `banar` (`id`, `banar1`, `banar2`, `banar3`) VALUES
 CREATE TABLE `giantmall` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -62,8 +62,8 @@ INSERT INTO `giantmall` (`id`, `title`, `price`, `img`) VALUES
 (3, 'am', 35435, '16057896695e9186d90930a.jpg'),
 (4, 'sdfsdfdf', 345, '16057896875e9186b77ffe5.jpg'),
 (5, 'camera', 2352, '1605801232image-1.jpg'),
-(6, 'Projector', 324, '1605801254image-2.jpg'),
-(7, 'Leptop', 352, '1605801271image-3.jpg'),
+(6, 'Projector', 346.35, '16062207075e918fbbc8aa4.jpg'),
+(7, 'Leptop', 352.463, '16062207445e91867d10489.jpg'),
 (8, 'Jackfood', 255, '16058048695e918e5e69637.jpg'),
 (10, 'orange', 35, '16060226145e91867d10489.jpg'),
 (11, 'tometo2', 46, '16060226295e918f4983378.jpg'),
@@ -79,7 +79,7 @@ INSERT INTO `giantmall` (`id`, `title`, `price`, `img`) VALUES
 CREATE TABLE `heromarket` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -94,7 +94,7 @@ INSERT INTO `heromarket` (`id`, `title`, `price`, `img`) VALUES
 (6, 'Projector', 324, '1605801254image-2.jpg'),
 (7, 'Leptop', 352, '1605801271image-3.jpg'),
 (8, 'Jackfood', 255, '16058048695e918e5e69637.jpg'),
-(12, 'kola', 2352354, '16057414605e888cd63c6f7.jpg');
+(12, 'kola', 2352350, '16057414605e888cd63c6f7.jpg');
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,7 @@ INSERT INTO `heromarket` (`id`, `title`, `price`, `img`) VALUES
 CREATE TABLE `tesco` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -117,11 +117,11 @@ INSERT INTO `tesco` (`id`, `title`, `price`, `img`) VALUES
 (3, 'am', 35435, '16057896695e9186d90930a.jpg'),
 (4, 'sdfsdfdf', 345, '16057896875e9186b77ffe5.jpg'),
 (5, 'camera', 2352, '1605801232image-1.jpg'),
-(6, 'Projector', 324, '1605801254image-2.jpg'),
+(6, 'Projector', 3.24, '16062182105e918fe372153.jpg'),
 (7, 'Leptop', 352, '1605801271image-3.jpg'),
 (8, 'Jackfood', 255, '16058048695e918e5e69637.jpg'),
-(9, 'Xiaomi m2', 18, '1606206809delivery-concept-portrait-happy-african-american-delivery-man-red-cloth-holding-box-package-isolated-grey-studio-background-copy-space.jpg'),
-(10, 'kola', 3434, '16062083215e888cd63c6f7.jpg');
+(9, 'Xiaomi m2', 36.99, '16062180875e91875a71cd5.jpg'),
+(10, 'kola', 34.34, '16062180405e9186b77ffe5.jpg');
 
 -- --------------------------------------------------------
 
@@ -145,7 +145,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `role`) VALUES
 (12, 'sopon', 'sopon', '$2y$10$n3UsBrMOGLoOLxXYrDAu3.ufQcv/nreivLXqsZZjGH.NQbW9wpUAe', 'sopon@gmail.com', 0),
 (17, 'Jaint', 'au', '$2y$10$h6Sg7xAaJit891fAfdtQ9.tjXy/DHvpvRXaPqzj33/GzLA7CMKNyW', 'ja@gmail.ocm', 3),
-(18, 'bisnukundu', 'bisnukundu', '$2y$10$85NEzxzR/yIK2NaOx4k3lO5..hdJWHwcSnUJPpy5N6Ky7/wroEh7G', 'bisnukundu@gmail.com', 1);
+(18, 'bisnukundu', 'bisnukundu', '$2y$10$85NEzxzR/yIK2NaOx4k3lO5..hdJWHwcSnUJPpy5N6Ky7/wroEh7G', 'bisnukundu@gmail.com', 1),
+(19, 'bipul', 'bipul kundu', '$2y$10$wcYp1GkClPcW0Ip8umxIBuYEt6qGVELb7A1jsKf8ZTeBzXFxUzTG6', 'bipul@gmail.com', 3);
 
 --
 -- Indexes for dumped tables
@@ -213,7 +214,7 @@ ALTER TABLE `tesco`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

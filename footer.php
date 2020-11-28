@@ -1,9 +1,8 @@
-
 <div class="col-12 align-self-end">
     <!-- Footer -->
     <footer class="row">
         <div class="col-12 text-center py-4 bg-dark text-white">
-            <h6 class="text-center">&copy Copyright by Bisnu kundu</h6>
+            <h6 class="text-center">© 2020 Pricewar.com.my All right reserved</h6>
         </div>
     </footer>
     <!-- Footer -->

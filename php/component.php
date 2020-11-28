@@ -5,10 +5,10 @@ function component($productname, $productprice, $productimg, $productid)
     $element = "
     
     <div class=\"col-md-3 col-lg-2 col-sm-6 my-3 my-md-2\">
-                <form action=\"index.php\" method=\"post\">
+                <form action=\"index.php#bisnu\" method=\"post\">
                     <div class=\"card shadow\">
                         <div>
-                            <img src=\"../project/admin/assets/product/$productimg\" alt=\"Image1\" class=\"img-fluid card-img-top\">
+                            <img src=\"../project/admin/assets/product/$productimg\" alt=\"Image1\" class=\"img-fluid  card-img-top\">
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$productname</h5>
@@ -30,12 +30,12 @@ function cartElement($productimg, $productname, $productprice, $productid)
                     <div class=\"border rounded\">
                         <div class=\"row bg-white\">
                             <div class=\"col-md-6 pl-0\">
-                                <img src=\"../project/admin/assets/product/$productimg\" alt=\"Image1\" class=\"img-fluid\">
+                                <img width=\"120px\" src=\"../project/admin/assets/product/$productimg\" alt=\"Image1\" class=\"img-fluid\">
                             </div>
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$productname</h5>
                               
-                                <h5 class=\"pt-2\">$$productprice</h5>
+                                <h5 class=\"pt-2\">RM $productprice</h5>
                                 <button type=\"submit\" class=\"btn btn-danger\" name=\"remove\">Remove</button>
                             </div>
                            

@@ -70,6 +70,7 @@
                                 </form>
                             </div> -->
                             <div class="col-lg-auto ml-auto text-center text-lg-left header-item-holder">
+                            <a href="clear.php" class="btn btn-info">Clear</a>
                                 <a href="cart.php" class="header-item s_cart">
                                     <i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i><span id="header-favorite">
                                         <?php

@@ -13,7 +13,7 @@ if (isset($_POST['add'])) {
         $item_array_id = array_column($_SESSION['cart'], "product_id");
         if (in_array($_POST['product_id'], $item_array_id)) {
             echo "<script>alert('Product is already added in the cart..!')</script>";
-            echo "<script>window.location = 'index.php'</script>";
+            echo "<script>window.location = 'index.php#bisnu'</script>";
         } else {
             $count = count($_SESSION['cart']);
             $item_array = array(
@@ -37,42 +37,17 @@ require_once("slider.php");
 
 <body>
 
-    <div class="container-fluid text-center mt-4">
+    <div id="bisnu" class="container-fluid text-center mt-4">
         <h3 class="display-1">Products</h3>
         <div class="row text-center py-5">
             <?php
-            $check_title = [];
             $result = $database->show_data("giantmall");
-            $result2 = $database->show_data("tesco");
-            $result3 = $database->show_data("heromarket");
-
             foreach ($result as $product) {
                 component($product['title'], $product['price'], $product['img'], $product['id']);
-                array_push($check_title, $product["title"]);
             };
-
-            foreach ($result2 as $product2) {
-                if (!in_array($product2["title"], $check_title)) {
-                    component($product2['title'], $product2['price'], $product2['img'], $product2['id']);
-                    array_push($check_title, $product2["title"]);
-                }
-            }
-            foreach ($result3 as $product3) {
-                if (!in_array($product3["title"], $check_title)) {
-                    component($product3['title'], $product3['price'], $product3['img'], $product3['id']);
-                    array_push($check_title, $product3["title"]);
-                }
-            }
-
-
-
-
-
-
-
             ?>
         </div>
-       <a href="https://www.messenger.com/t/100007763590397/" target="blank"><img width="60px" class="messenger_icon" src="images/icon/messenger.svg" alt="message"></a>
+        <a href="https://www.messenger.com/t/100007763590397/" target="blank"><img width="60px" class="messenger_icon" src="images/icon/messenger.svg" alt="message"></a>
     </div>
 
 
