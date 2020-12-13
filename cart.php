@@ -35,7 +35,9 @@ if (isset($_POST['remove'])) {
                     <hr>
 
                     <?php
-
+                    // echo "<pre>";
+                    // print_r($_SESSION["cart"]);
+                    // echo "</pre>";
                     $total1 = [];
                     if (isset($_SESSION['cart'])) {
                         $product_id = array_column($_SESSION['cart'], 'product_id');
@@ -43,7 +45,7 @@ if (isset($_POST['remove'])) {
                         $result = $db->show_data("giantmall");
                         foreach ($result as $row) {
                             foreach ($product_id as $id) {
-                                if ($row['id'] == $id) {
+                                if ($row['title'] == $id) {
                                     cartElement($row['img'], $row['title'], $row['price'], $row['id']);
                                     array_push($total1, $row['price']);
                                 }
@@ -74,7 +76,7 @@ if (isset($_POST['remove'])) {
                         $cart_title = [];
                         foreach ($result as $row) {
                             foreach ($product_id as $id) {
-                                if ($row['id'] == $id) {
+                                if ($row['title'] == $id) {
                                     array_push($cart_title, $row["title"]);
                                 }
                             }
@@ -113,7 +115,7 @@ if (isset($_POST['remove'])) {
 
                         foreach ($result as $row) {
                             foreach ($product_id as $id) {
-                                if ($row['id'] == $id) {
+                                if ($row['title'] == $id) {
                                     array_push($cart_title, $row["title"]);
                                 }
                             }
@@ -243,12 +245,12 @@ if (isset($_POST['remove'])) {
                 // LOCATION GET CODE  END
                 navigator.geolocation.getCurrentPosition(success, error, options);
             }
-            // AEON BIG MARKET
-            Location("Lot 7, 3 Damansara, Jalan SS20", ".lmarket1")
-            // HERO MARKET 
-            Location("HeroMarket Damansara Damai", ".lmarket2")
+            // // AEON BIG MARKET
+            Location("Tesco Paradigm Mall", ".lmarket2")
+            // // HERO MARKET 
+            Location("HeroMarket 47301 Petaling Jaya, Selangor, Malaysia", ".lmarket3 ")
             // GIANT MARKET 
-            Location("Giant Hypermarket Kelana Jaya No 33 Jalan Ss6", ".lmarket3")
+            Location("Giant Hypermarket Kelana Jaya No 33 Jalan Ss6", ".lmarket1")
 
 
 

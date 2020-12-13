@@ -11,7 +11,7 @@ foreach ($banar as $ban) {
     $banar3 = $ban['banar3'];
 }
 ?>
-<div class="col-12 px-0" >
+<div class="col-12 px-0">
     <div id="slider" class="carousel slide w-100" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -20,13 +20,13 @@ foreach ($banar as $ban) {
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="./admin/assets/banar/<?php echo $banar1; ?>" style="height: 600px;" class="img-fluid slider-img">
+                <img src="./admin/assets/banar/<?php echo $banar1; ?>" style="height: 500px;" class="img-fluid slider-img">
             </div>
             <div class="carousel-item">
-                <img src="./admin/assets/banar/<?php echo $banar2; ?>" style="height: 600px;" class="img-fluid slider-img">
+                <img src="./admin/assets/banar/<?php echo $banar2; ?>" style="height: 500px;" class="img-fluid slider-img">
             </div>
             <div class="carousel-item">
-                <img src="./admin/assets/banar/<?php echo $banar3; ?>" style="height: 600px;" class="img-fluid slider-img">
+                <img src="./admin/assets/banar/<?php echo $banar3; ?>" style="height: 500px;" class="img-fluid slider-img">
             </div>
         </div>
         <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">

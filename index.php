@@ -12,8 +12,9 @@ if (isset($_POST['add'])) {
     if (isset($_SESSION['cart'])) {
         $item_array_id = array_column($_SESSION['cart'], "product_id");
         if (in_array($_POST['product_id'], $item_array_id)) {
+            $reurn_page = "index.php#" . $_POST['product_id'];
             echo "<script>alert('Product is already added in the cart..!')</script>";
-            echo "<script>window.location = 'index.php#bisnu'</script>";
+            echo "<script>window.location = $reurn_page</script>";
         } else {
             $count = count($_SESSION['cart']);
             $item_array = array(
@@ -37,7 +38,7 @@ require_once("slider.php");
 
 <body>
 
-    <div id="bisnu" class="container-fluid text-center mt-4">
+    <div class="container-fluid text-center mt-4">
         <h3 class="display-1">Products</h3>
         <div class="row text-center py-5">
             <?php
@@ -47,7 +48,7 @@ require_once("slider.php");
             };
             ?>
         </div>
-        <a href="https://www.messenger.com/t/100007763590397/" target="blank"><img width="60px" class="messenger_icon" src="images/icon/messenger.svg" alt="message"></a>
+        <a href="https://www.messenger.com/t/100007763590397/" target="blank"><img width="60px" class="messenger_icon mb-4" src="images/icon/messenger.svg" alt="message"></a>
     </div>
 
 

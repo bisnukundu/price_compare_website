@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>E-Commerce Template</title>
+    <title>Price Comparison</title>
 
     <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
@@ -70,7 +70,7 @@
                                 </form>
                             </div> -->
                             <div class="col-lg-auto ml-auto text-center text-lg-left header-item-holder">
-                            <a href="clear.php" class="btn btn-info">Clear</a>
+                                <a href="clear.php" class="btn btn-info">Clear</a>
                                 <a href="cart.php" class="header-item s_cart">
                                     <i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i><span id="header-favorite">
                                         <?php
